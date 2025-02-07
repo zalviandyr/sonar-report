@@ -3,8 +3,8 @@ import { mkConfig, generateCsv, asString } from "export-to-csv";
 import { writeFile } from "node:fs";
 import { Buffer } from "node:buffer";
 
-const username = "";
-const password = "";
+const usernameFreeIPA = "";
+const passwordFreeIPA = "";
 
 const chunk = (a, n) =>
   [...Array(Math.ceil(a.length / n))].map((_, i) => a.slice(n * i, n + n * i));
@@ -28,8 +28,8 @@ const rating = {
   const submit = await page.waitForSelector(".login-form .button");
   const username = await page.waitForSelector("#login");
   const password = await page.waitForSelector("#password");
-  await username.type(username);
-  await password.type(password);
+  await username.type(usernameFreeIPA);
+  await password.type(passwordFreeIPA);
 
   await submit.click();
   await page.waitForNavigation({ waitUntil: "networkidle0" });
