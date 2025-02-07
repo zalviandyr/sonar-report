@@ -1,0 +1,16 @@
+{
+  "name": "sonar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "export-to-csv": "^1.4.0",
+    "puppeteer": "^24.2.0"
+  }
+}
